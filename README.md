@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Your Component Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Your Component Library is a collection of reusable and customizable components for React applications.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+To install the component library, run the following command:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Button Component
 
-### `npm test`
+The Button component allows you to create different types of buttons with various states and variations.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```jsx
+import React from 'react';
+import { Button } from 'your-component-library-name';
 
-### `npm run build`
+function MyComponent() {
+  return (
+    <div>
+      <Button state="default" variation="primary" onClick={() => console.log('Button clicked')}>
+        Primary Button
+      </Button>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+      <Button state="hover" variation="secondary">
+        Secondary Button
+      </Button>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+      {/* Add more examples and variations as needed */}
+    </div>
+  );
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+export default MyComponent;
 
-### `npm run eject`
+#### Props
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Button Props
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Prop          | Type      | Default     | Description                                    |
+| ------------- | --------- | ----------- | ---------------------------------------------- |
+| state         | string    | 'default'   | The state of the button (default, hover, active) |
+| variation     | string    | 'primary'   | The variation style of the button               |
+| onClick       | function  | -           | The click event handler for the button          |
+| disabled      | boolean   | false       | Disables the button if true                     |
+| className     | string    | -           | Additional CSS class for the button             |
+| style         | object    | -           | Inline styles for the button                    |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+InputField Component
+The InputField component is used for capturing user input with different states and types.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+import React from 'react';
+import { InputField } from 'your-component-library-name';
 
-## Learn More
+function MyComponent() {
+  return (
+    <div>
+      <InputField type="text" state="default" value="" onChange={(e) => console.log(e.target.value)} />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+      <InputField type="email" state="focus" value="" onChange={(e) => console.log(e.target.value)} />
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+      {/* Add more examples and variations as needed */}
+    </div>
+  );
+}
 
-### Code Splitting
+export default MyComponent;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### InputField Props
 
-### Analyzing the Bundle Size
+| Prop       | Type      | Description                                   |
+| ---------- | --------- | --------------------------------------------- |
+| type       | string    | Input field type (text, email, password, etc.) |
+| state      | string    | Input field state (default, focus, error, etc.)|
+| value      | string    | Current value of the input field               |
+| onChange   | function  | Event handler for input change event           |
+| className  | string    | Additional CSS class for the input field       |
+| style      | object    | Inline styles for the input field              |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contributing
+If you'd like to contribute to the component library, please follow the guidelines in CONTRIBUTING.md.
 
-### Making a Progressive Web App
+License
+This project is licensed under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Remember to replace `your-component-library-name` with the actual name of your component library. Also, make sure to provide specific details about the props and their usage for each component.
 
-### Advanced Configuration
+Customize the README file based on your component library's specific features, usage, and any additional information you want to provide to users.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Including sections for contributing and licensing is optional but recommended to provide clear guidelines for contributions and clarify the license terms of your component library.
