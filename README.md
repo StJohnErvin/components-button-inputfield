@@ -1,6 +1,6 @@
-# Your Component Library
+# Component Button and InputFiled
 
-Your Component Library is a collection of reusable and customizable components for React applications.
+Component Button and InputFiled Library is a collection of reusable and customizable components for React applications.
 
 ## Installation
 
