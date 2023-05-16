@@ -90,3 +90,4 @@ Remember to replace `your-component-library-name` with the actual name of your c
 Customize the README file based on your component library's specific features, usage, and any additional information you want to provide to users.
 
 Including sections for contributing and licensing is optional but recommended to provide clear guidelines for contributions and clarify the license terms of your component library.
+# component-library
